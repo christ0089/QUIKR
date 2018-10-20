@@ -1,0 +1,92 @@
+page-home {
+   
+
+    img {
+        height: 60%;
+        overflow: hidden;
+        object-fit: cover;
+    }
+}
+.Divider {
+    height: 1px;
+    width: calc(100% - 20px);
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: darkgray;
+}
+
+.Startbutton {
+    margin-top: 20px;
+    
+    width: calc(100% - 30px);
+    margin-left: 15px;
+    margin-right: 15px;
+    background-color: rgb(116, 183, 38);
+}
+
+
+.Box {
+    padding-left: 1.25rem;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    .buttonIcon {
+        width: 25px;
+        height: 25px;
+        padding: none;
+        background-color: transparent;
+        font-size: 2.25rem;
+    }
+    label {
+        font-size: 2rem;
+        margin-left: 7.5rem;
+    }
+}
+
+.BoxDiv {
+    padding-left: 5.5rem;
+}
+
+.AuthCode {
+    display: inline-block;
+    width: calc(100%/6 - 20px);
+    margin-left: 5px;
+    height: 40px;
+    border: none;
+    background-color: lightgray;
+    text-align: center;
+}
+
+slider-up {
+    background: inherit;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1 !important;
+
+    div {
+        ion-label {
+            font-size: 2rem;
+            padding-left: 15px;
+        }
+        ion-input {
+            font-size: 2.5rem;
+            padding-left: 15px; 
+        }
+    }
+}
+
+
+.styledButton {
+    background-color: transparent;
+    color: rgb(35, 218, 59);
+    width: calc(100% - 30px);
+    box-shadow: none;
+    span {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+
+
+

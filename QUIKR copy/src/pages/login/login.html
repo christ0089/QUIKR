@@ -1,0 +1,82 @@
+<!--
+  Generated template for the LoginPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-content>
+  <div class="Destination" [style.backgroundColor]="confirmTrip == true ? 'rgb(45,114,114)' : 'rgb(82,114,45)'">
+    <h2>A Donde Vamos Hoy?</h2>
+    <img (tap)="openSettings()" src="assets/imgs/profile_pic.jpg">
+    <ion-range *ngIf="confirmTrip == true">
+    </ion-range>
+    <div class="Map" [style.display]="displayMode == 'Map' ? 'block' : 'none'" >
+      <div #googleMaps id="googleMaps"></div>
+    </div>
+    <div *ngIf="desitnationSel == false">
+      <p>Punto de Partida</p>
+      <button ion-item>
+        <ion-icon name="pin" item-start></ion-icon>
+        Ubicacion Actual
+      </button>
+      <button (tap)="showMap()">Ver Mapa</button>
+    </div>
+    <div *ngIf="desitnationSel == true">
+      <p>Punto de Partida</p>
+      <button ion-item>
+        <ion-icon name="pin" item-start></ion-icon>
+        Ubicacion Actual
+      </button>
+      <p>Punto de Destino</p>
+      <button ion-item>
+        <ion-icon name="home" item-start></ion-icon>
+        Casa
+      </button>
+      <button (tap)="showMap()">Ver Mapa</button>
+    </div>
+  </div>
+</ion-content>
+
+<slider-up [options]="drawerOptions">
+  <div *ngIf="desitnationSel == false">
+    <ion-searchbar placeholder="Lugar de Destino"></ion-searchbar>
+    <div class="Divider"></div>
+
+    <ion-list>
+      <button ion-item (tap)="selected()">
+        <ion-icon name="home" item-start></ion-icon>
+        Casa
+        <p>Nuevo Laredo, Mty</p>
+      </button>
+    </ion-list>
+  </div>
+  <div *ngIf="desitnationSel == true && mininaturize == false" class="FareContainer">
+    <ion-item *ngIf="confirmTrip == true">
+      <ion-avatar item-start>
+        <img src="assets/imgs/profile_pic.jpg">
+      </ion-avatar>
+      <h1>Javier Losa 4.5 Stars(100k)</h1>
+      <p>Suzuki Venom (1242P)</p>
+      <p></p>
+    </ion-item>
+    <p>Costo</p>
+    <h1 class="Fare"> $56.70</h1>
+    <button ion-item>Cash</button>
+    <button class="Startbutton" *ngIf="confirmTrip == false" ion-button (tap)="startTrip()">Confirmar Viaje</button>
+  </div>
+  <div class="buttonTypes" *ngIf="desitnationSel == true">
+    <div *ngIf="mininaturize == true" class="DestinationMin">
+      <h2 >Su Destino esta a: </h2>
+      <ion-range></ion-range>
+    </div>
+      <button>
+        <ion-icon name="pin" item-start></ion-icon>
+        <ion-label>Localizacion Actual</ion-label>
+      </button>
+      <button>
+          <ion-icon name="call" item-start></ion-icon>
+          <ion-label>Emergencia</ion-label>  
+      </button>
+    </div>
+</slider-up>

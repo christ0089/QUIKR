@@ -1,0 +1,72 @@
+<ion-content>
+  <img src="https://galeri8.uludagsozluk.com/494/motosiklet-taksi_903793_m.jpg">
+</ion-content>
+
+<slider-up [options]="drawerOptions">
+  <div class="Box" *ngIf="registerAccount == false">
+    <ion-label>Iniciar Session</ion-label>
+    <ion-input placeholder="+52 871-269-1209"></ion-input>
+    <div class="Divider"></div>
+    <button class="Startbutton" ion-button (tap)="createAccount()">Crear Cuenta</button>
+  </div>
+
+  <div *ngIf="registerAccount == true && stepCount == 0">
+    <div class="Box">
+      <button (tap)="prevStep()" class="buttonIcon">
+        <ion-icon name="close"></ion-icon>
+      </button>
+      <label>Paso 1 de 2</label>
+    </div>
+    <ion-label>Ingresa numero de Telefono</ion-label>
+    <ion-input placeholder="+52 871-269-1209"></ion-input>
+    <div class="Divider"></div>
+    <button class="Startbutton" ion-button (tap)="nextStep()">Siguiente</button>
+  </div>
+
+  <div *ngIf="registerAccount == true && stepCount == 1">
+    <div class="Box">
+      <button (tap)="prevStep()" class="buttonIcon">
+        <ion-icon name="arrow-round-back"></ion-icon>
+      </button>
+      <label>Paso 1 de 2</label>
+    </div>
+    <ion-label>Codigo de Activacion</ion-label>
+    <div class="BoxDiv">
+      <input class="AuthCode">
+      <input class="AuthCode">
+      <input class="AuthCode">
+      <input class="AuthCode">
+      <input class="AuthCode">
+      <input class="AuthCode">
+    </div>
+    <button class="Startbutton" ion-button (tap)="nextStep()">Siguiente</button>
+    <button ion-button class="styledButton">Renviar Codigo</button>
+    <button ion-button class="styledButton">Llamar Codigo por Telefono</button>
+  </div>
+
+  <div *ngIf="registerAccount == true && stepCount == 2">
+      <div class="Box">
+        <button (tap)="prevStep()" class="buttonIcon">
+          <ion-icon name="arrow-round-back"></ion-icon>
+        </button>
+        <label>Paso 2 de {{stepCount}}</label>
+      </div>
+      <ion-label>Ingresa tu Nombre</ion-label>
+      <ion-input placeholder="Nombre"></ion-input>
+      <div class="Divider"></div>
+      <button class="Startbutton" ion-button (tap)="nextStep()">Terminar Registro</button>
+    </div>
+
+    <div *ngIf="registerAccount == true && stepCount == 3">
+      <div class="Box">
+        <button (tap)="prevStep()" class="buttonIcon">
+          <ion-icon name="arrow-round-back"></ion-icon>
+        </button>
+        <label>Paso 2 de {{stepCount}}</label>
+      </div>
+      <ion-label>Ingresa tu Correo</ion-label>
+      <ion-input placeholder="Nombre"></ion-input>
+      <div class="Divider"></div>
+      <button class="Startbutton" ion-button (tap)="nextStep()">Terminar Registro</button>
+    </div>
+</slider-up>

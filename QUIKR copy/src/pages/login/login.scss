@@ -1,0 +1,144 @@
+page-login {
+    #googleMaps {
+        height: 480px;
+    }
+
+    font-family: 'Helvetica Neue';
+
+
+    .Startbutton {
+        margin-top: .5rem;
+        margin-bottom: .75rem;
+    }
+}
+.Map {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    margin-left: -1.25rem;
+    margin-right: -1.25rem;
+}
+.Destination {
+    background-color: rgb(82,114,45);
+    height: 55%;
+    padding-top:2.5rem;
+    padding-left: 1.15rem;
+    padding-right: 1.15rem;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    h2 {
+        margin-right: 10rem;
+        font-size: 30px;
+    } 
+    img {
+        position: absolute;
+        width: 7.5rem;
+        height: 7.5rem;
+        border-radius: 3.75rem;
+        overflow: hidden;
+        transform: translate(20%, -50%);
+        right: 10%;
+        top: 10%;
+    }
+    div {
+        margin-top: auto;
+        p {
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+        button {
+            margin-bottom: 5px;
+            margin-top: 2.5px;
+            display: flex;
+            color: white;
+            background: none;
+        }
+    }
+}
+
+.buttonTypes {
+    display: inline;
+    margin-right: auto;
+    .DestinationMin {
+        background-color: rgb(82,114,45);
+        padding: 10px;
+        h2 {
+            margin-top: 0;
+            margin-bottom: 0;
+            color: white;
+        }
+    }
+    button {
+        width: calc(100%/2 - 5px);
+        font-size: 1.15em;
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+        color: rgb(60,60,60);
+        background-color: white;
+        padding-top: 2.5px;
+        ion-label {
+            font-size: .95em;
+            margin-top: 5px;
+            padding-bottom: 2.5px;
+            margin-bottom: 0px;
+        }
+    }
+}
+
+.FareContainer {
+    padding:10px;
+    p {
+        text-align: center;
+        font-size: 15px;
+    }
+    .Fare{
+       text-align: center;
+       margin-top: .5rem;
+       margin-bottom: .25rem;
+       font-size: 2.70em;
+        color: rgb(35, 218, 59);
+    }
+
+    ion-item {
+        h1 {
+            font-size: .75em;
+        }
+        p {
+            font-size: .65em;
+            text-align: left;
+        }
+    }
+
+    .item-ios {
+        padding-right: 16px;
+    }
+    .item-md {
+        padding-right: 16px;
+    }
+}
+
+
+slider-up {
+    ion-list {
+        button {
+            ion-icon {
+                font-size: 1.75rem;
+                color: gray;
+            }
+            ion-label {
+                font-size: 1.75rem;
+                color: gray;
+            }
+        }
+    }
+}
+
+.searchbar-md .searchbar-input {
+    background: none;
+    box-shadow: none;
+}
+
+.searchbar-ios {
+    background: none;
+}
